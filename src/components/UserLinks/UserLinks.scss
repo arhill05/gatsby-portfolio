@@ -1,0 +1,13 @@
+@import '../../variables';
+.user-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+i {
+    color: $lightTextColor;
+    margin: 8px;
+    font-size: 2rem;
+}

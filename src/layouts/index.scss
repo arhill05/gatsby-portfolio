@@ -1,0 +1,144 @@
+@import '../variables';
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    color: $darkTextColor;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: $headingColor;
+}
+
+a {
+    color: $linkColor;
+    text-decoration-color: darken($linkColor, 15%);
+}
+
+main {
+    display: grid;
+    grid-template-rows: 100vh 1fr;
+}
+
+.index-container {
+    display: grid;
+    grid-template-rows: 100vh 1fr;
+}
+
+button {
+    border: none;
+    border-radius: 3px;
+    padding: 12px 30px;
+    margin: 10px 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.dark-background {
+    background-color: $darkBackgroundColor;
+    color: $lightTextColor;
+
+    >h1,>h2,>h3,>h4 {
+        color: $lightTextColor;
+    }
+}
+
+button.primary {
+    background-color: $primaryButtonBackgroundColor;
+    color: $lightTextColor;
+}
+
+.hero {
+    background-color: $darkBackgroundColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .hero-content {
+        h1 {
+            color: $lightTextColor;
+            text-shadow: 0 16px 38px rgba(0,0,0,0.56);
+            font-size: 6rem;
+            word-wrap: break-word;
+            text-align: right;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .hero-card-image {
+            position: relative;
+            margin-top: -25%;
+            img {
+                width: 100%;
+                border-radius: $defaultBorderRadius;
+                box-shadow: $boxShadow;
+            }
+        }
+        .hero-card {
+            h2, h3 {
+                text-align: right;
+            }
+            button {
+                float: right;
+            }
+            background-color: $lightBackgroundColor;
+            box-shadow: $boxShadow;
+            color: $darkTextColor;
+            padding: 32px;
+            position: relative;
+            margin-left: 32px;
+            height: 50%;
+            width: 25%;
+            border-radius: $defaultBorderRadius;
+        }
+    }
+}
+
+nav {
+    background-color: $darkBackgroundColor;
+    box-shadow: $boxShadow;
+    width: 100%;
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    top: 0;
+    margin-top: -48px;
+    ul {
+        margin: 0;
+        padding: 16px 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        a {
+            border-radius: $defaultBorderRadius;
+            color: $lightTextColor;
+            cursor: pointer;
+            font-weight: 700;
+            padding: 15px;
+            // text-decoration: underline;
+            transition: background-color 0.2s;
+            &:hover {
+                background-color: lighten($darkBackgroundColor, 10%);
+            }
+        }
+    }
+}
+
+main {
+    background-color: $lightBackgroundColor;
+}
+
