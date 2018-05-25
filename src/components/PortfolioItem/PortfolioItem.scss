@@ -1,0 +1,35 @@
+@import '../../variables';
+.card-image {
+
+    position: relative;
+    img {
+        box-shadow: $boxShadow;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: $defaultBorderRadius;
+        border-top-right-radius: $defaultBorderRadius;
+    }
+}
+.card {
+    h2,
+    h3 {
+        text-align: right;
+    }
+    button {
+        float: right;
+    }
+    background-color: $lightBackgroundColor;
+    box-shadow: $boxShadow;
+    color: $darkTextColor;
+    min-height: fit-content;
+    height: 50%;
+    padding: 0;
+    position: relative;
+    margin: 32px 16px;
+    border-radius: $defaultBorderRadius;
+    width: 28%;
+
+    .card-content {
+        padding: 0 32px 16px 32px;
+    }
+}
