@@ -9,12 +9,15 @@ import PortfolioItem from '../components/PortfolioItem/PortfolioItem';
 class Index extends React.Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
-    const portfolioItems = config.portfolioItems.map(item => <PortfolioItem {...item} />);
+    const portfolioItems = config.portfolioItems.map((item, index) => <PortfolioItem key={index} {...item} />);
     return (
       <div className="index-container">
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
-        <header className="hero dark-background">
+        <header className="hero">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
           <div className="hero-content">
             <h1>
               Andrew<br /> Hill
