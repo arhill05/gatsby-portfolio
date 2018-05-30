@@ -14,10 +14,12 @@ class Index extends React.Component {
       <div className="index-container">
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
-        <header className="hero">
+        <div className="stars-container">
           <div id="stars"></div>
           <div id="stars2"></div>
           <div id="stars3"></div>
+        </div>
+        <header className="hero">
           <div className="hero-content">
             <h1>
               Andrew<br /> Hill
@@ -58,7 +60,7 @@ class Index extends React.Component {
             </li>
           </ul>
         </nav>
-        <main>
+        <main className="dark-background">
           <section id="portfolio">
             <h2>Portfolio</h2>
             <div className="portfolio-items-container">{portfolioItems}</div>
