@@ -43,6 +43,7 @@ class Index extends React.Component {
               <button className="primary">Get in touch</button>
             </div>
           </div>
+          <img src="herobg.png" className="hero-bg-img" />
         </header>
         <nav className="dark-background">
           <ul>
@@ -60,7 +61,7 @@ class Index extends React.Component {
             </li>
           </ul>
         </nav>
-        <main className="dark-background">
+        <main className="light-background">
           <section id="portfolio">
             <h2>Portfolio</h2>
             <div className="portfolio-items-container">{portfolioItems}</div>

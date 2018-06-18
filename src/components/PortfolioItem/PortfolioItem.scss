@@ -1,6 +1,5 @@
 @import '../../variables';
 .card-image {
-
     position: relative;
     img {
         box-shadow: $boxShadow;
@@ -10,6 +9,37 @@
         border-top-right-radius: $defaultBorderRadius;
     }
 }
+
+.portfolio-item {
+    display: flex;
+    width: 40%;
+    position: relative;
+    margin: 64px 0;
+    h3 {
+        color: $darkTextColor;
+    }
+    .portfolio-item-info,
+    .portfolio-item-image {
+        flex: 1;
+        display: inline;
+    }
+    .portfolio-item-image {
+        >img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+    &:after {
+        content: '';
+        width: 70%;
+        height: 2px;
+        background: $rum;
+        position: absolute;
+        bottom: -64px;
+        text-align: center;
+    }
+}
+
 .card {
     h2,
     h3 {
@@ -27,8 +57,7 @@
     position: relative;
     margin: 32px 16px;
     border-radius: $defaultBorderRadius;
-    width: 28%;
-
+    width: 100%;
     .card-content {
         padding: 0 32px 16px 32px;
     }
